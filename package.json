@@ -1,7 +1,7 @@
 {
-  "name": "base-linux-utils",
+  "name": "base-utils",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application for learning base linux console utils",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
