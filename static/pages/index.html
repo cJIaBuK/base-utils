@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="../styles/index.css" rel="stylesheet">
+    <title>Обучение основам работы с консольными утилитами ОС Linux</title>
+  </head>
+  <body>
+
+    <div class="main-menu__container">
+
+      <div class="main-menu__item mb-2">
+        <button id="button-manager" >Файловый менеджер MC</button>
+      </div>
+      <div class="main-menu__item mb-2">
+        <button id="button-screen" >Screen</button>
+      </div>
+      <div class="main-menu__item mb-2">
+        <button id="button-find">Поиск файлов</button>
+      </div>
+      <div class="main-menu__item mb-2">
+        <button id="button-process">Список процессов</button>
+      </div>
+      <div class="main-menu__item mb-3">
+        <button id="button-edit">Текстовый редактор Vim</button>
+      </div>
+      <div class="main-menu__item mt-6 mb-3">
+        <button id="button-info">О программе</button>
+      </div>
+      <div class="main-menu__item mt-3">
+        <button id="button-close">Выход</button>
+      </div>
+      
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../../renderer.js"></script>
+    <!-- <script src="../../close-button.js"></script> -->
+  </body>
+</html>

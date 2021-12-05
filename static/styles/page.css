@@ -1,0 +1,14 @@
+.main-menu__container{
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 0 0 0;
+  justify-content: center;
+}
+.main-menu__item{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

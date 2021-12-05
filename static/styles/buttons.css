@@ -1,0 +1,16 @@
+button {
+  width: 330px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  border: 1px #54412c solid;
+  color: #54412c;
+  background-color: antiquewhite;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 1px 2px 4px 1px rgb(131 140 176 / 75%);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}

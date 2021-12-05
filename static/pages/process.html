@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../styles/index.css" rel="stylesheet">
+  <title>Список процессов</title>
+</head>
+<body>
+  <div class="page-body__container">
+    <h3>HTOP</h3>
+    <p>
+      htop мощная утилита для просмотра запущенных процессов в Linux. Пользоваться ею очень удобно.
+      Здесь поддерживаются не только горячие клавиши, но и управление мышью.
+      А ещё она выводит всё в цвете, поэтому смотреть на данные намного приятнее. Для установки программы выполните:
+      <pre><code>sudo apt install htop</code></pre>
+    </p>
+    <p>
+      Для того чтобы запустить выполните в терминале:
+      <pre><code>htop</code></pre>
+    </p>
+    <div class="image-container"><img src="../img/process/1.jpg" alt="" width="600" height="340"></div>
+    <p>Вот значение основных колонок в выводе утилиты:</p>
+    <ul>
+      <li><strong>PID</strong> - идентификатор процесса.</li>
+      <li><strong>USER</strong> - имя пользователя, от имени которого выполняется процесс.</li>
+      <li><strong>PR</strong> - приоритет планировщика, установленный для процесса.</li>
+      <li><strong>NI</strong> - рекомендуемый приоритет процесса. Это значение можно менять, может не совпадать с реальным приоритетом планировщика.</li>
+      <li><strong>VIRT</strong> - всё, что находится в памяти, используется или зарезервировано для использования.</li>
+      <li><strong>RES</strong> - всё, что находится в оперативной памяти и относится к процессу. Расшифровывается как Resident Memory Size, указывается в килобайтах.</li>
+      <li><strong>SHR</strong> - часть памяти из RES, которую занимают ресурсы, доступные для использования другим процессам. Расшифровывается как Shared Memory Size.</li>
+      <li><strong>S</strong> - состояние процесса: D - ожидает завершения операции, R - запущен, S - спит, T - остановлен, t - остановлен отладчиком, Z - зомби.</li>
+      <li><strong>%CPU</strong> - процент использования ресурсов процессора.</li>
+      <li><strong>%MEM</strong> - процент использования ресурсов оперативной памяти на основе колонки RES.</li>
+      <li><strong>TIME</strong> - обще процессорное время, которое процесс использовал с момента запуска.</li>
+      <li><strong>COMAND</strong> - команда, с помощью которой был запущен процесс.</li>
+    </ul>
+    <p>
+      Для настройки выводимых данных нажмите кнопку <kbd>F2</kbd>, затем перейдите в раздел <strong>Display Options</strong>:
+    </p>
+    <div class="image-container"><img src="../img/process/2.jpg" alt="" width="600" height="340"></div>
+    <p>
+      Для того чтобы настроить какие колонки будут отображаться используйте пункт меню <strong>Columns</strong>:
+    </p>
+    <div class="image-container"><img src="../img/process/3.jpg" alt="" width="600" height="340"></div>
+    <p>
+      Тут вы можете выбрать какие колонки отображать, а какие нет, а также можете настроить их порядок.
+    </p>
+  </div>
+</body>
+</html>
