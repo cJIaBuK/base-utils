@@ -24,20 +24,20 @@ function createInfoWindow () {
     maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
   })
   infoWindow.loadFile('static/pages/info.html')
-  // infoWindow.webContents.openDevTools()
+  // infoWindow.webContents.openDevTools()  // при создании окна открывает панельку разработчика(оставил закомменченым)
 }
 
 function createFileManagerWindow () {
   const fileManagerWindow = new BrowserWindow({
     width: 650,
     height: 600,
-    parent: thisWindow, //присваиваем новому окну родителя, чтобы оно всегда отображалось поверх него
-    modal: true, //делаем дочернее окно модальным -> нельзя взять родительское окно в фокус
+    parent: thisWindow,
+    modal: true,
     icon: path.join(__dirname, 'static/icons/flaticon.png'),
-    autoHideMenuBar: true, //прячем менюшку браузера
-    resizable: false, //убираем возможность изменения размера окна
-    minimizable: false, //убираем кнопку "свернуть" в меню окна (вроде как не работает на Linux)
-    maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
+    autoHideMenuBar: true,
+    resizable: false,
+    minimizable: false,
+    maximizable: false
   })
   fileManagerWindow.loadFile('static/pages/filemanager.html')
   // fileManagerWindow.webContents.openDevTools()
@@ -47,13 +47,13 @@ function createScreenWindow () {
   const screenWindow = new BrowserWindow({
     width: 650,
     height: 600,
-    parent: thisWindow, //присваиваем новому окну родителя, чтобы оно всегда отображалось поверх него
-    modal: true, //делаем дочернее окно модальным -> нельзя взять родительское окно в фокус
+    parent: thisWindow,
+    modal: true,
     icon: path.join(__dirname, 'static/icons/flaticon.png'),
-    autoHideMenuBar: true, //прячем менюшку браузера
-    resizable: false, //убираем возможность изменения размера окна
-    minimizable: false, //убираем кнопку "свернуть" в меню окна (вроде как не работает на Linux)
-    maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
+    autoHideMenuBar: true,
+    resizable: false,
+    minimizable: false,
+    maximizable: false
   })
   screenWindow.loadFile('static/pages/screen.html')
   // screenWindow.webContents.openDevTools()
@@ -63,13 +63,13 @@ function createFileEditorWindow () {
   const fileEditorWindow = new BrowserWindow({
     width: 650,
     height: 600,
-    parent: thisWindow, //присваиваем новому окну родителя, чтобы оно всегда отображалось поверх него
-    modal: true, //делаем дочернее окно модальным -> нельзя взять родительское окно в фокус
+    parent: thisWindow,
+    modal: true,
     icon: path.join(__dirname, 'static/icons/flaticon.png'),
-    autoHideMenuBar: true, //прячем менюшку браузера
-    resizable: false, //убираем возможность изменения размера окна
-    minimizable: false, //убираем кнопку "свернуть" в меню окна (вроде как не работает на Linux)
-    maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
+    autoHideMenuBar: true,
+    resizable: false,
+    minimizable: false,
+    maximizable: false
   })
   fileEditorWindow.loadFile('static/pages/fileeditor.html')
   // fileEditorWindow.webContents.openDevTools()
@@ -79,13 +79,13 @@ function createFindWindow () {
   const findWindow = new BrowserWindow({
     width: 650,
     height: 600,
-    parent: thisWindow, //присваиваем новому окну родителя, чтобы оно всегда отображалось поверх него
-    modal: true, //делаем дочернее окно модальным -> нельзя взять родительское окно в фокус
+    parent: thisWindow,
+    modal: true,
     icon: path.join(__dirname, 'static/icons/flaticon.png'),
-    autoHideMenuBar: true, //прячем менюшку браузера
-    resizable: false, //убираем возможность изменения размера окна
-    minimizable: false, //убираем кнопку "свернуть" в меню окна (вроде как не работает на Linux)
-    maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
+    autoHideMenuBar: true,
+    resizable: false,
+    minimizable: false,
+    maximizable: false
   })
   findWindow.loadFile('static/pages/find.html')
   // findWindow.webContents.openDevTools()
@@ -95,17 +95,20 @@ function createProcessWindow () {
   const processWindow = new BrowserWindow({
     width: 650,
     height: 600,
-    parent: thisWindow, //присваиваем новому окну родителя, чтобы оно всегда отображалось поверх него
-    modal: true, //делаем дочернее окно модальным -> нельзя взять родительское окно в фокус
+    parent: thisWindow,
+    modal: true,
     icon: path.join(__dirname, 'static/icons/flaticon.png'),
-    autoHideMenuBar: true, //прячем менюшку браузера
-    resizable: false, //убираем возможность изменения размера окна
-    minimizable: false, //убираем кнопку "свернуть" в меню окна (вроде как не работает на Linux)
-    maximizable: false //убираем кнопку "во весь экран" в меню окна (вроде как не работает на Linux)
+    autoHideMenuBar: true,
+    resizable: false,
+    minimizable: false,
+    maximizable: false
   })
   processWindow.loadFile('static/pages/process.html')
   // findWindow.webContents.openDevTools()
 }
+
+// здесь мы находим кнопки из scr/pages/index.html по параметру Id и вешаем на них обработчик нажатия
+// по клику кнопка запускает функцию создания окна
 
 document.getElementById("button-info").addEventListener("click", function (e) {
   createInfoWindow()
