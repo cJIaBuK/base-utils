@@ -2,7 +2,10 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const remoteMain = require('@electron/remote/main')
+
 remoteMain.initialize()
+
+if (require('electron-squirrel-startup')) return app.quit()
 
 function createWindow () {
   // Create the browser window.
